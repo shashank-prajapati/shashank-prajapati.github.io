@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script type="text/javascript" src="./imagePaths.js"></script>
+        <script>
+            function load(){
+                var mydata = JSON.parse(data);
+                console.log(mydata);
+
+                var grid=document.getElementById('grid');
+                for(var i=0;i<mydata.length;i++){
+
+                grid.innerHTML = grid.innerHTML + '<div class="grid-item"><img src="'+mydata[i].path+'"></div>'
+                }
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
         <link href="./home.css" rel="stylesheet">
     </head>
-    <body>  
+    <body onload="load()">  
         <div class="navbar">
             <ul>
                 <li><a href="./index.html">Home</a></span></li>
@@ -14,34 +27,8 @@
                 <li><a class="active-tab" href="./gallery.html">Gallery</a></li>
             </ul>
         </div>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
-            <div class="grid-item">
-                <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
-            </div>
+        <div class="grid-container" id="grid">
+            
         </div>
     </body>
 </html>
