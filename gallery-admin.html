@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="./galleryAdminScript.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+        <link href="./home.css" rel="stylesheet">
+    </head>
+    <body onload="fetchJSONData()">  
+        <div class="navbar">
+            <ul>
+                <li><a href="./index.html">Home</a></span></li>
+                <li><a href="./aboutMe.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a class="active-tab" href="./gallery-admin.html">Gallery-Admin</a></li>
+            </ul>
+        </div>
+        <div class="container-left-align">
+            <button id="ani-btn">Add new Image</button>
+            <br>
+            <br>
+        </div>
+        <div class="grid-container" id="grid">
+            
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Enter the URL to add new image</h3>
+                <div>
+                    <input type="text" id ="img-name" name=img-name placeholder="Name">
+                    <p class="modal-error" id="name-error">Name must not be empty.</p>
+                    <input type="url" id="img-url" name="img-url" placeholder="URL">
+                    <p class="modal-error" id="url-error">Url is not valid.</p>
+                    <textarea name="description" id="description" rows="5" placeholder="Enter Description"></textarea> 
+                    <p class="modal-error" id="desc-error">Description is too short.</p>
+                    <input type="date" id="img-date" name="img-date">
+                    <p class="modal-error" id="date-error">Date is not valid.</p>
+                    <br>
+                    <button id="url-submit" onclick="submitModal(this.id)">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </body>
+</html>

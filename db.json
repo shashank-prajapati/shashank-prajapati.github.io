@@ -1,0 +1,36 @@
+{
+  "imagePaths": [
+    {
+      "id": 0,
+      "path": "./images/image 1.png"
+    },
+    {
+      "id": 1,
+      "path": "./images/image 2.png"
+    },
+    {
+      "id": 3,
+      "path": "./images/image 4.png"
+    },
+    {
+      "id": 4,
+      "path": "./images/image 5.png"
+    },
+    {
+      "id": 5,
+      "path": "./images/image 6.png"
+    },
+    {
+      "id": 6,
+      "path": "./images/image 7.png"
+    },
+    {
+      "id": 7,
+      "path": "./images/image 8.png"
+    },
+    {
+      "id": 8,
+      "path": "./images/image 9.png"
+    }
+  ]
+}

@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="./imagePaths.js"></script>
-        <script>
-            function load(){
-                var mydata = JSON.parse(data);
-                console.log(mydata);
-
-                var grid=document.getElementById('grid');
-                for(var i=0;i<mydata.length;i++){
-
-                grid.innerHTML = grid.innerHTML + '<div class="grid-item"><img src="'+mydata[i].path+'"></div>'
-                }
-            }
-        </script>
+        <script type="text/javascript" src="./galleryScript.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gallery</title>
         <link href="./home.css" rel="stylesheet">
     </head>
-    <body onload="load()">  
+    <body onload="fetchJSONData()">  
         <div class="navbar">
             <ul>
                 <li><a href="./index.html">Home</a></span></li>
                 <li><a href="./aboutMe.html">About</a></li>
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a class="active-tab" href="./gallery.html">Gallery</a></li>
+                <li><a href="./gallery-admin.html">Gallery-Admin</a></li>
             </ul>
         </div>
         <div class="grid-container" id="grid">
